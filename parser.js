@@ -63,15 +63,8 @@ const getFieldName = (text) => {
 
   text = myTrimStart(text);
 
-  if (text.startsWith(`distinct":true,"url":"https://api.github`)) {
-    console.log("lol");
-  }
-
   let i = 0;
   for (; i < text.length; i++) {
-    if (content === "distinct:true,") {
-      console.log("here lol");
-    }
     const letter = text[i];
     if (letter === '"' && !isInsideQuote) {
       isInsideQuote = true;
@@ -171,14 +164,10 @@ const _decodeFn = (json) => {
   } else if (json[0] === "[") {
     object = [];
     json = myTrimStart(json.slice(1));
-    
+
     while (json.length > 0) {
       json = myTrimStart(json);
       if (json[0] === "]") return { result: object, json: json.slice(1) };
-      if(json.length < 20){
-        console.log("para aqui poh");
-      }
-      
 
       const decodeResult = _decodeFn(json);
       json = decodeResult.json;
@@ -253,8 +242,7 @@ console.log(encode(jsonFromInternet));
   console.timeEnd("$my-parser");
 
   console.log("\n\n");
-  
-  
+
   console.time("$js-default-encoder");
   const _jsEncoderResult = JSON.stringify(_jsEncodeResult);
   console.timeEnd("$js-default-encoder");
