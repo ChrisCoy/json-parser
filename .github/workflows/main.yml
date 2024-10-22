@@ -1,8 +1,8 @@
 name: Automatic PR Review with AI
 
 on:
-  pull_request: 
-      types: [opened, synchronize]
+  pull_request:
+    types: [opened, synchronize]
   issue_comment:
   pull_request_review_comment: # Novo gatilho para comentários em revisões de PR
 
