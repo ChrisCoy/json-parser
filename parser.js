@@ -1,5 +1,7 @@
 const fs = require("fs");
 
+console.log("lol hahahaha");
+
 /**
  * @param {object} el
  * @returns {boolean}
