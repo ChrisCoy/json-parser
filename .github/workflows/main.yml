@@ -23,5 +23,5 @@ jobs:
           AZURE_API_TYPE: "azure"
           AZURE_API_VERSION: "turbo-2024-04-09"
           AZURE_API_BASE: "https://teste-pr-agent.openai.azure.com"
-          AZURE_DEPLOYMENT_ID: "gpt-4"
+          AZURE_DEPLOYMENT_ID: "bf665bca-a16f-41c0-bd7e-b1d78a4be422"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
