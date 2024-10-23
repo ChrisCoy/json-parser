@@ -1,0 +1,4 @@
+[config]
+model = "..."
+model_turbo = "..."
+fallback_models = ["..."]
